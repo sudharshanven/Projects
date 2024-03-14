@@ -4,7 +4,6 @@ global difficulty_level
 def simple_operations():
     n = 0
     for i in range(5):
-
         a = rn.randint(2, 9)
         b = rn.randint(2, 9)
         opers = ["+", "-", "*"]
@@ -21,27 +20,28 @@ def simple_operations():
             answer = a * b
 
         user_input = check_typ(input())
-
         if user_input == answer:
             print("Right!")
             n += 1
         else:
             print("Wrong!")
+            
     print(f"Your mark is {n}/5. Would you like to save the result? Enter yes or no.")
     save_result(input(), n)
 def integral_squares():
     n = 0
     for i in range(5):
-
         num = rn.randint(11, 29)
         square_num = num*num
         print(num)
+        
         user_input = check_typ(input())
         if user_input == square_num:
             print("Right!")
             n += 1
         else:
             print("Wrong!")
+            
     print(f"Your mark is {n}/5. Would you like to save the result? Enter yes or no.")
     save_result(input(), n)
 def check_typ(x):
